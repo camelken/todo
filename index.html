@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>TODO</h1>
+      <div class="stats">
+        <span id="stats-text">0件残り</span>
+      </div>
+    </header>
+
+    <form class="add-form" id="add-form">
+      <input
+        type="text"
+        id="new-task-input"
+        placeholder="新しいタスクを追加..."
+        autocomplete="off"
+        maxlength="200"
+      >
+      <select id="priority-select">
+        <option value="normal">普通</option>
+        <option value="high">高</option>
+        <option value="low">低</option>
+      </select>
+      <button type="submit">追加</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="active">未完了</button>
+      <button class="filter-btn" data-filter="completed">完了済み</button>
+    </div>
+
+    <ul class="task-list" id="task-list">
+      <li class="empty-state" id="empty-state">タスクがありません</li>
+    </ul>
+
+    <footer class="footer" id="footer" style="display:none">
+      <button id="clear-completed">完了済みを削除</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
